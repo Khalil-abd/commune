@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox nodeOrientation="RIGHT_TO_LEFT" stylesheets="@resources/css/Style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ka.commune.view.ActiviteBSController">
+   <children>
+      <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="15.0" style="-fx-background-color: #2C3A47;">
+         <children>
+            <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#addActivite" prefHeight="30.0" prefWidth="52.0" style="-fx-background-color: #10ac84;" styleClass="cursor_hand" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@resources/img/add.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="30.0" prefWidth="208.0" HBox.hgrow="ALWAYS" />
+            <ComboBox fx:id="comboYear" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="100.0" />
+            <Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="30.0" prefWidth="158.0" HBox.hgrow="ALWAYS" />
+            <TextField fx:id="textSearchActivite" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" promptText="ابحث">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+         </padding>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </HBox>
+      <BorderPane fx:id="borderPane" VBox.vgrow="ALWAYS">
+         <center>
+            <TableView fx:id="tableActivite" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" nodeOrientation="RIGHT_TO_LEFT" />
+         </center>
+         <right>
+            <VBox fx:id="managePane" alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="400.0" prefWidth="292.0" spacing="30.0" BorderPane.alignment="TOP_CENTER">
+               <children>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <JFXTextField fx:id="textSujet" alignment="CENTER_RIGHT" focusColor="#009688" labelFloat="true" prefWidth="230.0" promptText="موضوع النشاط" />
+                     </children>
+                  </HBox>
+                  <JFXDatePicker fx:id="date" nodeOrientation="RIGHT_TO_LEFT" prefHeight="30.0" prefWidth="230.0" promptText="تاريخ النشاط" />
+                  <HBox alignment="CENTER">
+                     <children>
+                        <JFXTextArea fx:id="textJointures" focusColor="#10ac84" labelFloat="true" nodeOrientation="RIGHT_TO_LEFT" prefHeight="186.0" prefWidth="267.0" promptText="مرفقات" style="-fx-border-color: #10ac84;">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXTextArea>
+                     </children>
+                  </HBox>
+                  <TilePane fx:id="buttonsPane" alignment="CENTER" hgap="10.0" prefWidth="292.0" vgap="10.0">
+                     <children>
+                        <Button fx:id="buttonClose" mnemonicParsing="false" onAction="#close" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #ee5253;" styleClass="cursor_hand" text="إلغاء" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="buttonAddActivite" mnemonicParsing="false" onAction="#addNewActivite" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #10ac84;" styleClass="cursor_hand" text="إضافة" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="buttonUpdateActivite" mnemonicParsing="false" onAction="#updateActivite" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #10ac84;" styleClass="cursor_hand" text="تعديل" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </TilePane>
+               </children>
+            </VBox>
+         </right>
+      </BorderPane>
+   </children>
+</VBox>

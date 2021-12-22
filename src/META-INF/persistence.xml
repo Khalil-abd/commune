@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="Commune001" transaction-type="RESOURCE_LOCAL">
+	
+		<class>ka.commune.entity.Circonscription</class>
+		<class>ka.commune.entity.Commission</class>
+		<class>ka.commune.entity.Designationsujetsession</class>
+		<class>ka.commune.entity.Domaine</class>
+		<class>ka.commune.entity.Mandat</class>
+		<class>ka.commune.entity.Membreconseil</class>
+		<class>ka.commune.entity.Objetreunion</class>
+		<class>ka.commune.entity.Partiepolitique</class>
+		<class>ka.commune.entity.Session</class>
+		<class>ka.commune.entity.Sujetsession</class>
+		<class>ka.commune.entity.User</class>
+		<class>ka.commune.entity.ActiviteBS</class>
+		<class>ka.commune.entity.ObjetActiviteBS</class>
+		<class>ka.commune.entity.Fonction</class>
+		<class>ka.commune.entity.NiveauScolaire</class>
+		<class>ka.commune.entity.Association</class>
+		<class>ka.commune.entity.CommissionEC</class>
+		<class>ka.commune.entity.ReunionAssociation</class>
+		<class>ka.commune.entity.ReunionCommissionec</class>
+		<class>ka.commune.entity.PretSalle</class>
+		<class>ka.commune.entity.Salle</class>
+		<class>ka.commune.entity.Materiel</class>
+		<class>ka.commune.entity.PretedMateriel</class>
+		<class>ka.commune.entity.PretedMaterielPK</class>
+		<class>ka.commune.entity.PretMateriel</class>
+		<class>ka.commune.entity.Operation</class>
+		<class>ka.commune.entity.Partenaire</class>
+		<class>ka.commune.entity.Cansistance</class>
+		<class>ka.commune.entity.Categorie</class>
+		<class>ka.commune.entity.Operation</class>
+		<class>ka.commune.entity.PartenaireOperation</class>
+		<class>ka.commune.entity.Realisation</class>
+		<class>ka.commune.entity.Resultat</class>
+		<class>ka.commune.entity.ActiviteType</class>
+		<properties>
+			<property name="eclipselink.jdbc.batch-writing" value="JDBC"/>
+			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/commune"/>
+			<property name="javax.persistence.jdbc.user" value="root"/>
+			<property name="javax.persistence.jdbc.password" value="Aptx-4869"/>
+		</properties>
+	</persistence-unit>
+</persistence>

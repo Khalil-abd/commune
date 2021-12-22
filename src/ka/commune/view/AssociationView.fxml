@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<TabPane nodeOrientation="RIGHT_TO_LEFT" prefHeight="659.0" prefWidth="713.0" stylesheets="@resources/css/Style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ka.commune.view.AssociationController">
+    <tabs>
+        <Tab closable="false" styleClass="cursor_hand" text="لائحة الجمعيات">
+            <content>
+                <VBox>
+                    <children>
+                        <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="15.0" style="-fx-background-color: #2C3A47;">
+                            <children>
+                                <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#addNewAssociation" prefHeight="30.0" prefWidth="52.0" style="-fx-background-color: #10ac84;" styleClass="cursor_hand" textFill="WHITE">
+                                    <font>
+                                        <Font name="System Bold" size="15.0" />
+                                    </font>
+                                    <graphic>
+                                        <ImageView fitHeight="28.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@resources/img/add.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </Button>
+                        <Button alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#downloadListAssociation" prefHeight="30.0" prefWidth="181.0" style="-fx-background-color: #22a6b3;" styleClass="cursor_hand" text="   تحميل لائحة الجمعيات" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="DOWNLOAD" size="17" wrappingWidth="15.0" />
+                           </graphic>
+                        </Button>
+                        <Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="30.0" prefWidth="87.0" HBox.hgrow="ALWAYS" />
+                                <TextField fx:id="textSearchAssociation" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" promptText="ابحث">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </TextField>
+                            </children>
+                            <padding>
+                                <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                            </padding>
+                            <VBox.margin>
+                                <Insets />
+                            </VBox.margin>
+                        </HBox>
+                        <BorderPane fx:id="borderPaneAssociation" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+                            <center>
+                                <TableView fx:id="tableAssociation" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" nodeOrientation="RIGHT_TO_LEFT" prefHeight="586.0" prefWidth="463.0" />
+                            </center>
+                            <right>
+                                <ScrollPane fx:id="managedPaneAssociation" fitToWidth="true" nodeOrientation="RIGHT_TO_LEFT" pannable="true" vbarPolicy="ALWAYS" BorderPane.alignment="CENTER">
+                                    <VBox alignment="CENTER" cache="true" cacheHint="QUALITY" nodeOrientation="LEFT_TO_RIGHT" spacing="30.0">
+                                        <padding>
+                                            <Insets bottom="20.0" top="20.0" />
+                                        </padding>
+                                        <HBox alignment="CENTER">
+                                            <JFXTextField fx:id="textNom" alignment="CENTER_RIGHT" focusColor="#10ac84" labelFloat="true" prefHeight="30.0" prefWidth="200.0" promptText="اسم الجمعية" />
+                                        </HBox>
+                                        <HBox alignment="CENTER">
+                                            <children>
+                                                <JFXTextField fx:id="textAdresse" alignment="CENTER_RIGHT" focusColor="#10ac84" labelFloat="true" prefHeight="30.0" prefWidth="200.0" promptText="العنوان" />
+                                            </children>
+                                        </HBox>
+                                        <HBox alignment="CENTER">
+                                            <children>
+                                                <JFXTextField fx:id="textRepresantant" alignment="CENTER_RIGHT" focusColor="#10ac84" labelFloat="true" prefHeight="30.0" prefWidth="200.0" promptText="ممثل الجمعية" />
+                                            </children>
+                                        </HBox>
+                                        <HBox alignment="CENTER">
+                                            <children>
+                                                <JFXTextField fx:id="textPhone" alignment="CENTER_RIGHT" focusColor="#10ac84" labelFloat="true" prefHeight="30.0" prefWidth="200.0" promptText="الهاتف" />
+                                            </children>
+                                        </HBox>
+                              <HBox alignment="CENTER">
+                                 <children>
+                                    <JFXTextField fx:id="textEmail" alignment="CENTER_RIGHT" focusColor="#10ac84" labelFloat="true" prefHeight="30.0" prefWidth="200.0" promptText="البريد الإلكتروني" />
+                                 </children>
+                              </HBox>
+                                        <HBox alignment="CENTER">
+                                            <children>
+                                                <JFXTextField fx:id="textDomaine" alignment="CENTER_RIGHT" focusColor="#10ac84" labelFloat="true" prefHeight="30.0" prefWidth="200.0" promptText="المجال الرئيسي" />
+                                            </children>
+                                        </HBox>
+                                        <JFXDatePicker fx:id="dateFondation" nodeOrientation="RIGHT_TO_LEFT" prefHeight="30.0" prefWidth="200.0" promptText="تاريخ التأسيس" />
+                                        <JFXDatePicker fx:id="dateRenouvelement" nodeOrientation="RIGHT_TO_LEFT" prefHeight="30.0" prefWidth="200.0" promptText="تاريخ التجديد" />
+                                        <JFXDatePicker fx:id="dateExpiration" nodeOrientation="RIGHT_TO_LEFT" prefHeight="30.0" prefWidth="200.0" promptText="تاريخ انتهاء المكتب" />
+                                        <TilePane fx:id="buttonsPaneAssociation" alignment="CENTER" hgap="10.0" prefWidth="292.0" vgap="10.0">
+                                            <children>
+                                                <Button fx:id="buttonCloseAssociation" mnemonicParsing="false" onAction="#closeAssociation" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #ee5253;" styleClass="cursor_hand" text="إلغاء" textFill="WHITE">
+                                                    <font>
+                                                        <Font name="System Bold" size="14.0" />
+                                                    </font>
+                                                </Button>
+                                                <Button fx:id="buttonAddAssociation" mnemonicParsing="false" onAction="#addAssociation" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #10ac84;" styleClass="cursor_hand" text="إضافة" textFill="WHITE">
+                                                    <font>
+                                                        <Font name="System Bold" size="14.0" />
+                                                    </font>
+                                                </Button>
+                                                <Button fx:id="buttonUpdateAssociation" mnemonicParsing="false" onAction="#updateAssociation" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #10ac84;" styleClass="cursor_hand" text="تعديل" textFill="WHITE">
+                                                    <font>
+                                                        <Font name="System Bold" size="14.0" />
+                                                    </font>
+                                                </Button>
+                                            </children>
+                                        </TilePane>
+                                    </VBox>
+                                </ScrollPane>
+                            </right>
+                        </BorderPane>
+                    </children>
+                </VBox>
+            </content>
+        </Tab>
+        <Tab closable="false" styleClass="cursor_hand" text="الإجتماعات">
+            <content>
+                <VBox>
+                    <children>
+                        <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="15.0" style="-fx-background-color: #2C3A47;">
+                            <children>
+                                <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#addNewReunion" prefHeight="30.0" prefWidth="52.0" style="-fx-background-color: #10ac84;" textFill="WHITE">
+                                    <font>
+                                        <Font name="System Bold" size="15.0" />
+                                    </font>
+                                    <graphic>
+                                        <ImageView fitHeight="28.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@resources/img/add.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </Button>
+                        <Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="30.0" prefWidth="87.0" HBox.hgrow="ALWAYS" />
+                        <ComboBox fx:id="comboYear" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="100.0" />
+                                <Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="30.0" prefWidth="158.0" HBox.hgrow="ALWAYS" />
+                                <TextField fx:id="textSearchReunion" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" promptText="ابحث">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </TextField>
+                            </children>
+                            <padding>
+                                <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                            </padding>
+                            <VBox.margin>
+                                <Insets />
+                            </VBox.margin>
+                        </HBox>
+                        <BorderPane fx:id="borderPaneReunion" VBox.vgrow="ALWAYS">
+                            <center>
+                                <TableView fx:id="tableReunion" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" nodeOrientation="RIGHT_TO_LEFT" />
+                            </center>
+                            <right>
+                        <ScrollPane fx:id="managedPaneReunion" BorderPane.alignment="TOP_CENTER">
+                           <content>
+                                      <VBox alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="400.0" prefWidth="292.0" spacing="20.0">
+                                          <children>
+                                              <HBox alignment="CENTER">
+                                                  <children>
+                                                      <JFXTextField fx:id="textSujet" alignment="CENTER_RIGHT" focusColor="#10ac84" labelFloat="true" prefHeight="30.0" prefWidth="200.0" promptText="موضوع الاجتماع" />
+                                                  </children>
+                                              </HBox>
+                                              <JFXDatePicker fx:id="dateReunion" nodeOrientation="RIGHT_TO_LEFT" prefHeight="30.0" prefWidth="200.0" promptText="تاريخ الإجتماع" />
+                                              <JFXTimePicker fx:id="timeReunion" nodeOrientation="LEFT_TO_RIGHT" pickOnBounds="false" prefHeight="30.0" prefWidth="200.0" promptText="الساعة" />
+                                              <TilePane fx:id="buttonsPaneReunion" alignment="CENTER" hgap="10.0" prefWidth="292.0" vgap="10.0">
+                                                  <children>
+                                                      <Button fx:id="buttonCloseReunion" mnemonicParsing="false" onAction="#closeReunion" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #ee5253;" styleClass="cursor_hand" text="إلغاء" textFill="WHITE">
+                                                          <font>
+                                                              <Font name="System Bold" size="14.0" />
+                                                          </font>
+                                                      </Button>
+                                                      <Button fx:id="buttonAddReunion" mnemonicParsing="false" onAction="#addReunion" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #10ac84;" styleClass="cursor_hand" text="إضافة" textFill="WHITE">
+                                                          <font>
+                                                              <Font name="System Bold" size="14.0" />
+                                                          </font>
+                                                      </Button>
+                                                      <Button fx:id="buttonUpdateReunion" mnemonicParsing="false" onAction="#updateReunion" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #10ac84;" styleClass="cursor_hand" text="تعديل" textFill="WHITE">
+                                                          <font>
+                                                              <Font name="System Bold" size="14.0" />
+                                                          </font>
+                                                      </Button>
+                                                  </children>
+                                              </TilePane>
+                                          </children>
+                                      </VBox>
+                           </content>
+                        </ScrollPane>
+                            </right>
+                        </BorderPane>
+                    </children>
+                </VBox>
+            </content>
+        </Tab>
+    </tabs>
+</TabPane>

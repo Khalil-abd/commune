@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="rootPane" alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ka.commune.view.LoginController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <ImageView fitHeight="111.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@resources/img/login1.png" />
+               </image>
+            </ImageView>
+         </children></HBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+         <children>
+            <JFXTextField fx:id="textLogin" alignment="CENTER_RIGHT" focusColor="#10ac84" labelFloat="true" maxWidth="1.7976931348623157E308" prefHeight="40.0" prefWidth="220.0" promptText="اسم المستخدم">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXTextField>
+            
+            <ImageView fitHeight="32.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@resources/img/user1.png" />
+               </image>
+            </ImageView>
+         </children></HBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+         <children>
+            <JFXPasswordField fx:id="textPassword" alignment="CENTER_RIGHT" focusColor="#10ac84" labelFloat="true" prefHeight="40.0" prefWidth="220.0" promptText="كلمة المرور">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXPasswordField>
+            
+            <ImageView fitHeight="32.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@resources/img/password.png" />
+               </image>
+            </ImageView>
+         </children></HBox>
+      <HBox alignment="CENTER" prefHeight="40.0" prefWidth="550.0">
+         <children>
+            <Label fx:id="labelMessage" alignment="CENTER_RIGHT" text="كلمة المرور خاطئة" textFill="#ee5253">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+         <children>
+            <Button fx:id="buttonClose" mnemonicParsing="false" onAction="#close" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #ee5253; -fx-background-radius: 12;" text="إغلاق" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="buttonLogin" mnemonicParsing="false" onAction="#login" prefHeight="40.0" prefWidth="133.0" style="-fx-background-color: #10ac84; -fx-background-radius: 12;" text="تسجيل الدخول" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children></HBox>
+   </children>
+</VBox>

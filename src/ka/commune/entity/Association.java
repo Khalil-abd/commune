@@ -1,0 +1,161 @@
+package ka.commune.entity;
+
+import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.Region;
+
+import java.io.Serializable;
+import javax.persistence.*;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+
+/**
+ * The persistent class for the association database table.
+ * 
+ */
+@Entity
+@NamedQuery(name="Association.findAll", query="SELECT a FROM Association a")
+public class Association implements Serializable {
+	private static final long serialVersionUID = 1L;
+
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private int idAssociation;
+
+	private String adresse;
+
+	@Temporal(TemporalType.DATE)
+	private Date dateExpiration;
+
+	@Temporal(TemporalType.DATE)
+	private Date dateFondation;
+
+	@Temporal(TemporalType.DATE)
+	private Date dateRenouvelement;
+
+	private String domaine;
+
+	private String email;
+
+	private String nom;
+
+	private String phone;
+
+	private String represantant;
+	@Transient
+	private int numero;
+
+	public int getNumero() {
+		return numero;
+	}
+
+	public void setNumero(int numero) {
+		this.numero = numero;
+	}
+
+	public Association() {
+		action.setHgap(5);
+		action.setVgap(2);
+		action.setPrefHeight(30);
+		action.setMaxHeight(60);
+		action.setPrefWidth(150);
+	}
+	@Transient
+	private FlowPane action=new FlowPane();
+
+	public FlowPane getAction() {
+		return action;
+	}
+
+	public void setAction(FlowPane action) {
+		this.action = action;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public int getIdAssociation() {
+		return this.idAssociation;
+	}
+
+	public void setIdAssociation(int idAssociation) {
+		this.idAssociation = idAssociation;
+	}
+
+	public String getAdresse() {
+		return this.adresse;
+	}
+
+	public void setAdresse(String adresse) {
+		this.adresse = adresse;
+	}
+
+	public Date getDateExpiration() {
+		return this.dateExpiration;
+	}
+
+	public void setDateExpiration(Date dateExpiration) {
+		this.dateExpiration = dateExpiration;
+	}
+
+	public Date getDateFondation() {
+		return this.dateFondation;
+	}
+
+	public void setDateFondation(Date dateFondation) {
+		this.dateFondation = dateFondation;
+	}
+
+	public Date getDateRenouvelement() {
+		return this.dateRenouvelement;
+	}
+
+	public void setDateRenouvelement(Date dateRenouvelement) {
+		this.dateRenouvelement = dateRenouvelement;
+	}
+
+	public String getDomaine() {
+		return this.domaine;
+	}
+
+	public void setDomaine(String domaine) {
+		this.domaine = domaine;
+	}
+
+	public String getNom() {
+		return this.nom;
+	}
+
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+
+	public String getPhone() {
+		return this.phone;
+	}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+
+	public String getRepresantant() {
+		return this.represantant;
+	}
+
+	public void setRepresantant(String represantant) {
+		this.represantant = represantant;
+	}
+
+	public String getSearchText() {
+		SimpleDateFormat format1 = new SimpleDateFormat("yyyy/MM/dd");
+		return  adresse +"--"+format1.format(dateExpiration) + "--"
+				+format1.format(dateFondation) + "--"+format1.format(dateRenouvelement) +
+				"--"+domaine + "--"+nom +"--"+ phone +"--"+ represantant +"--"+ numero+"---"+email ;
+	}
+}

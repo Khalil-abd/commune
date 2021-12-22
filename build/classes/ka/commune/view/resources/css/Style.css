@@ -1,0 +1,112 @@
+/* Uploading Fonts */
+
+@font-face {
+    src: url("../font/PNU-Bold.ttf");
+}
+
+/*  Style */
+
+.arabic_font{
+	-fx-font-family:"PNU";
+	-fx-font-size:22px;
+	-fx-font-weight:bold;
+}
+
+.cursor_hand{
+	-fx-cursor : HAND ;
+}
+
+.side_form{
+	-fx-background-color:#FFF;
+}
+.menu{
+	-fx-background-color:#FFFFFF;
+}
+
+.active{
+	-fx-cursor : HAND ;
+	-fx-background-color:#1C3A47;
+	-fx-font-size:14px;
+	-fx-font-weight:bold;
+}
+
+.active .text{
+	-fx-fill: white ;
+}
+
+.notActive{
+	-fx-cursor : HAND ;
+	-fx-background-color:transparent;
+	-fx-text-fill: black ;
+	-fx-font-size:14px;
+	-fx-font-weight:bold;
+}
+
+
+
+.notActive:hover{
+	-fx-background-color:#329da8;
+	-fx-text-fill: white ;
+	-fx-fill: white ;
+}
+
+.notActive:hover .text{
+	-fx-fill: white ;
+}
+
+.tab{
+	-fx-cursor : HAND ;
+	-fx-font-size: 14px;
+	-fx-fill-width: bold;
+}
+
+.tab:selected {
+	-fx-background-color:  #10ac84;
+}
+.tab:selected .tab-label{
+	-fx-text-fill: #FFFFFF;
+}
+
+.table-view .column-header-background {
+	-fx-background-color:   #329da8;
+	-fx-background-insets: 0 0 0 0;
+	-fx-background-radius: 0;
+	-fx-pref-height: 40px;
+	-fx-min-height: 40px;
+	-fx-max-height: 40px;
+}
+.table-view .column-header .label{
+	-fx-text-fill: white;
+	-fx-font-size: 13px;
+}
+
+.table-view .column-body{
+	-fx-alignment: center;
+}
+
+.table-view .column-header, .table-view .filler  {
+	-fx-size: 30;
+	-fx-border-width: 0 0 0 0;
+	-fx-background-color: transparent ;
+}
+
+.table-view > .virtual-flow > .scroll-bar {
+	-fx-font-size: 12pt;
+}
+
+
+.selected-menu{
+	-fx-background-color:   #1C3A47;
+	-fx-alignment: center ;
+	-fx-background-radius: 5;
+	-fx-text-fill: white;
+	-fx-cursor : HAND ;
+}
+
+.not-selected-menu{
+	-fx-background-color:  transparent;
+	-fx-alignment: center ;
+	-fx-background-radius: 5;
+	-fx-text-fill: white;
+	-fx-cursor : HAND ;
+}

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import de.jensd.fx.glyphs.octicons.OctIconView?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="rootStage" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" snapToPixel="false" stylesheets="@resources/css/Style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ka.commune.view.ServicesHomeController">
+   <right>
+      <VBox focusTraversable="true" maxHeight="1.7976931348623157E308" maxWidth="225.0" minHeight="-Infinity" minWidth="225.0" prefWidth="225.0" spacing="3.0" styleClass="menu" BorderPane.alignment="TOP_RIGHT">
+         <children>
+            <HBox alignment="CENTER">
+               <children>
+                  <Label prefHeight="40.0" styleClass="arabic_font" text="محاسبة الشركاء" textAlignment="RIGHT" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Arial Bold" size="22.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox fx:id="buttonAssociation" alignment="CENTER_RIGHT" onMouseClicked="#associationOnClick" prefHeight="60.0" prefWidth="225.0" spacing="10.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="الجمعيات" />
+                  <FontAwesomeIconView glyphName="USERS" size="30" styleClass="text" />
+               </children>
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <styleClass>
+                  <String fx:value="notActive" />
+                  <String fx:value="cursor_hand" />
+               </styleClass>
+            </HBox>
+            <HBox fx:id="buttonCommissionEC" alignment="CENTER_RIGHT" onMouseClicked="#CommissionECOnClick" prefHeight="60.0" prefWidth="225.0" spacing="10.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="هيئة تكافئ الفرص" />
+                  <FontAwesomeIconView glyphName="BALANCE_SCALE" size="25" styleClass="text" />
+               </children>
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <styleClass>
+                  <String fx:value="notActive" />
+                  <String fx:value="cursor_hand" />
+               </styleClass>
+            </HBox>
+            <HBox fx:id="buttonActiviteBS" alignment="CENTER_RIGHT" onMouseClicked="#activiteBSOnClick" prefHeight="60.0" prefWidth="225.0" spacing="10.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="أنشطة المكتب الإجتماعي" />
+                  <FontAwesomeIconView glyphName="LIST_ALT" size="30" styleClass="text" />
+               </children>
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <styleClass>
+                  <String fx:value="notActive" />
+                  <String fx:value="cursor_hand" />
+               </styleClass>
+            </HBox>
+            <HBox fx:id="buttonGestionSalle" alignment="CENTER_RIGHT" onMouseClicked="#gestionSalleOnClick" prefHeight="60.0" prefWidth="225.0" spacing="10.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="تدبير القاعة" />
+                  <MaterialDesignIconView glyphName="CITY" size="30" styleClass="text" />
+               </children>
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <styleClass>
+                  <String fx:value="notActive" />
+                  <String fx:value="cursor_hand" />
+               </styleClass>
+            </HBox>
+            <HBox fx:id="buttonGestionMateriel" alignment="CENTER_RIGHT" onMouseClicked="#gestionMaterielOnClick" prefHeight="60.0" prefWidth="225.0" spacing="10.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="تدبير المعدات" />
+                  <OctIconView glyphName="TOOLS" size="30" styleClass="text" />
+               </children>
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <styleClass>
+                  <String fx:value="notActive" />
+                  <String fx:value="cursor_hand" />
+               </styleClass>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </VBox>
+   </right>
+   <center>
+      <ScrollPane fx:id="homePane" fitToWidth="true" nodeOrientation="RIGHT_TO_LEFT" pannable="true" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>
